@@ -2,8 +2,7 @@
 
 -- DROP SCHEMA IF EXISTS "migraine-app" ;
 
-CREATE SCHEMA IF NOT EXISTS "migraine-app"
-    AUTHORIZATION postgres;
+CREATE SCHEMA IF NOT EXISTS "migraine-app";
 	
 -- Table: migraine-app.event
 
@@ -30,9 +29,6 @@ CREATE TABLE IF NOT EXISTS "migraine-app".event
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".event
-    OWNER to postgres;
-	
 -- Table: migraine-app.medication
 
 -- DROP TABLE IF EXISTS "migraine-app".medication;
@@ -48,9 +44,6 @@ CREATE TABLE IF NOT EXISTS "migraine-app".medication
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".medication
-    OWNER to postgres;
-	
 -- Table: migraine-app.migraine
 
 -- DROP TABLE IF EXISTS "migraine-app".migraine;
@@ -66,9 +59,6 @@ CREATE TABLE IF NOT EXISTS "migraine-app".migraine
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".migraine
-    OWNER to postgres;
-	
 -- Table: migraine-app.trigger
 
 -- DROP TABLE IF EXISTS "migraine-app".trigger;
@@ -84,9 +74,6 @@ CREATE TABLE IF NOT EXISTS "migraine-app".trigger
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".trigger
-    OWNER to postgres;
-	
 -- Table: migraine-app.migraine_trigger
 
 -- DROP TABLE IF EXISTS "migraine-app".migraine_trigger;
@@ -110,8 +97,6 @@ CREATE TABLE IF NOT EXISTS "migraine-app".migraine_trigger
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".migraine_trigger
-    OWNER to postgres;
 	
 -- Table: migraine-app.migraine_medication
 
@@ -137,8 +122,6 @@ CREATE TABLE IF NOT EXISTS "migraine-app".migraine_medication
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".migraine_medication
-    OWNER to postgres;
 	
 -- Table: migraine-app.event_medication
 
@@ -163,6 +146,4 @@ CREATE TABLE IF NOT EXISTS "migraine-app".event_medication
 
 TABLESPACE pg_default;
 
-ALTER TABLE IF EXISTS "migraine-app".event_medication
-    OWNER to postgres;
 	
