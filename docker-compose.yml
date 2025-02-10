@@ -1,4 +1,3 @@
-version: '3.8'
 
 services:
   postgres:
@@ -14,6 +13,21 @@ services:
     volumes:
       - ./db:/var/lib/postgres
       - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+  app:
+    container_name: app
+    depends_on: 
+      - postgres
+    build: ./src
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - POSTGRES_NAME=$POSTGRES_NAME
+    ports:
+      - "9000:3000"
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
 
 volumes: 
   db:
+  node_modules:
