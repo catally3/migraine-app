@@ -27,5 +27,21 @@ services:
     volumes:
       - .:/app
 
+  migraine-app:
+    container_name: migraine-app
+    depends_on:
+      - postgres
+      - app
+    build: ./migraine-app
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/migraine-app
+    stdin_open: true
+    tty: true
+    command: npm start
+
 volumes: 
   db:
