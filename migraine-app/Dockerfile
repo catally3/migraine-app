@@ -4,4 +4,4 @@ COPY package.json /migraine_app
 RUN npm install
 COPY . /migraine_app
 EXPOSE 3000
-CMD ["nmp","start"] 
+ 
